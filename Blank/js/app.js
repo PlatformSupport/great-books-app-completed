@@ -1,7 +1,6 @@
 (function () {
     var app;
 
-    // create an object to store the models for each view
     window.Books = {
       data: new kendo.data.DataSource({
         transport: {
@@ -14,13 +13,16 @@
         schema: {
             data: "books"
         }
-      })
+      }),
+      back: function() {
+        history.back();
+      }
     };
 
     document.addEventListener('deviceready', function () {  
       navigator.splashscreen.hide();
       
-      app = new kendo.mobile.Application(document.body, { skin: "flat" });
+      app = new kendo.mobile.Application(document.body, { layout: "main-layout" });
     }, false);
 
     window.app = app;
