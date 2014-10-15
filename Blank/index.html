@@ -14,6 +14,15 @@
 
 </head>
 <body>
+  <div data-role="view">
+    <ul data-role="listview" data-source="Books.data" data-template="books-template">
+    </ul>
+  </div>
 
+  <script type="text/x-kendo-template" id="books-template">
+      <div class="bookImage"><img src="img/#: image_url #" /></div>
+      <div class="bookTitle">#: name #</div>
+      <div class="bookAuthor">#: author #</div>
+  </script>
 </body>
 </html>
