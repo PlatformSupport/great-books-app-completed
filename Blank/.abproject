@@ -5,12 +5,12 @@
   "AppIdentifier": "com.telerik.Blank",
   "DisplayName": "Blank",
   "Author": "",
-  "Description": "",
+  "Description": "Blank",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1",
-	"2"
+    "2"
   ],
   "iOSBackgroundMode": [],
   "WP8TileTitle": "",
