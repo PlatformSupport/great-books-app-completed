@@ -16,6 +16,8 @@
       }),
       back: function() {
         app.navigate("#:back");
+      },
+      settings: function() {
       }
     };
 
