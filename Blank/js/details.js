@@ -4,7 +4,6 @@
         var location = window.location.toString();
         var isbn = location.substring(location.lastIndexOf('?')+4);
         
-        //alert(isbn);
         window.Books.data.filter({ field: "isbn", operator: "eq", value: isbn });
         
         var model = window.Books.data.view()[0];

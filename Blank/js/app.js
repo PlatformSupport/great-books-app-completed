@@ -15,7 +15,7 @@
         }
       }),
       back: function() {
-        history.back();
+        app.navigate("#:back");
       }
     };
 
