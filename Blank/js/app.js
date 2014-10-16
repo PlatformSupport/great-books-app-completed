@@ -15,7 +15,6 @@
         }
       }),
       back: function() {
-        app.navigate("#:back");
       },
       settings: function() {
       }
@@ -24,7 +23,7 @@
     document.addEventListener('deviceready', function () {  
       navigator.splashscreen.hide();
       
-      app = new kendo.mobile.Application(document.body, { layout: "main-layout" });
+      app = new kendo.mobile.Application(document.body);
     }, false);
 
     window.app = app;

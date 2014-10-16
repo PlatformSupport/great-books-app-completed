@@ -16,7 +16,12 @@
 </head>
 <body>
   <div data-role="view" data-title="Books" id="index">
-    <ul data-role="listview" data-source="Books.data" data-template="books-template"></ul>
+    <div data-role="header">
+      <div data-role="navbar">
+          <span data-role="view-title"></span>
+        </div>
+    </div>
+     <ul data-role="listview" data-source="Books.data" data-template="books-template"></ul>
   </div>
 
   <script type="text/x-kendo-template" id="books-template">
@@ -29,37 +34,5 @@
   
   <!-- Add Tutorial Markup Here -->
   
-  <div data-role="layout" data-id="main-layout">
-    <div data-role="header">
-      <div data-role="navbar">
-          <a href="#app-drawer" data-rel="drawer" data-role="button" data-align="left" data-icon="details"></a>
-          <span data-role="view-title"></span>
-        <a href="views/settings.html" data-role="button" data-align="right" data-icon="settings"></a>
-        </div>
-    </div>
-  </div>
-  
-  <div data-role="drawer" id="app-drawer">
-    <div data-role="header">
-        <div data-role="navbar">
-            <span data-role="view-title">Menu</span>
-        </div>
-    </div>
-
-    <ul data-role="listview">
-      <li><a href="#index" data-icon="home">Home</a></li>
-      <li><a href="views/favorites.html" data-icon="favorites">Favorites</a></li>
-      <li><a href="views/about.html" data-icon="globe">About</a></li>
-    </ul>
-  </div>
-  
-  <div data-role="layout" data-id="back-layout">
-    <div data-role="header">
-      <div data-role="navbar">
-          <a data-click="Books.back" data-role="button" data-align="left" data-icon="rewind">Back</a>
-          <span data-role="view-title"></span>
-        </div>
-    </div>
-  </div>
 </body>
 </html>
