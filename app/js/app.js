@@ -25,7 +25,7 @@
     document.addEventListener("deviceready", function () {
         navigator.splashscreen.hide();
 
-        app = new kendo.mobile.Application(document.body, { layout: "main-layout", transition: "fade", platform: 'ios7' });
+        app = new kendo.mobile.Application(document.body, { layout: "main-layout", transition: "fade" });
  
     }, false);
 
