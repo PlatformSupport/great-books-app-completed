@@ -2,79 +2,77 @@
 <html>
 
 <head>
-    <title>Great Books</title>
-    <meta charset="utf-8" />
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
-    <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/details.js"></script>
-    <script src="js/favorites.js"></script>
+	<title>Great Books</title>
+	<meta charset="utf-8" />
+	<link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+	<link href="css/main.css" rel="stylesheet" />
+	<script src="cordova.js"></script>
+	<script src="kendo/js/jquery.min.js"></script>
+	<script src="kendo/js/kendo.mobile.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/details.js"></script>
+	<script src="js/favorites.js"></script>
 </head>
 
 <body>
-    <div data-role="view" id="index" data-title="Books">
-        <ul data-role="listview" data-source="Books.data" data-template="books-template"></ul>
-    </div>
-    <script type="text/x-kendo-template" id="books-template">
-        <a href = "views/details.html?##id=#: isbn #" >
-            <div class="bookImage"><img src="#: image_url#"/></div>
-            <div class="bookTitle">#: name #</div>
-            <div class="bookAuthor">#: author#</div>
-        </a >
-    </script>
-    <!-- Add Tutorial Markup Here -->
-    <div data-role="layout" data-id="main-layout">
-        <div data-role="header">
-            <div data-role="navbar">
-                <!-- Comment out the following line if you are using the drawer -->
-               <a href="#app-drawer" data-rel="drawer" data-role="button" data-align="left" data-icon="details"></a>
-                <span data-role="view-title"></span>
-                <!-- Bind the settings button imperatively via the 'settings' function in app.js -->
-                <a data-click="Books.settings" data-role="button" data-align="right" data-icon="settings"></a>
-                
-                <!-- Bind the settings button declaratively via the 'href' attribute -->
-                <a href="views/settings.html" data-role="button" data-align="right" data-icon="settings">Settings</a>
-            </div>
-        </div>
-        
-        <!-- Uncomment the markup below if you'd like to use a tabstrip navigation and comment out the drawer markup-->
-        <!-- <div data-role="footer"> 
-            <div data-role="tabstrip">
-                <a href="#index" data-icon="home">Home</a>
-                <a href="views/favorites.html" data-icon="favorites">Favorites</a>
-                <a href="views/about.html" data-icon="globe">About</a>
-              </div>
-        </div> -->
-    </div>
-    <!-- Drawer markup -->
-     <div data-role="drawer" id="app-drawer">
-        <div data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title">Menu</span>
-            </div>
-        </div>
-        <ul data-role="listview">
-            <li><a href="#index" data-icon="home">Home</a>
-            </li>
-            <li><a href="views/favorites.html" data-icon="favorites">Favorites</a>
-            </li>
-            <li><a href="views/about.html" data-icon="globe">About</a>
-            </li>
-        </ul>
-    </div>
-    
-    <!-- Start of Lesson 2 -->
-    <div data-role="layout" data-id="back-layout">
-      <div data-role="header">
-          <div data-role="navbar">
-              <a data-role="button" data-align="left" data-icon="rewind" data-click="Books.back">Back</a>
-              <span data-role="view-title"></span>
-          </div>
-      </div>
-    </div>
+	<div data-role="view" id="index" data-title="Books">
+		<ul data-role="listview" data-source="Books.data" data-template="books-template"></ul>
+	</div>
+	<script type="text/x-kendo-template" id="books-template">
+		<a href="views/details.html?##id=#: isbn #">
+			<div class="bookImage"><img src="#: image_url#" />
+			</div>
+			<div class="bookTitle">#: name #</div>
+			<div class="bookAuthor">#: author#</div>
+		</a>
+	</script>
+	<!-- Add Tutorial Markup Here -->
+	<div data-role="layout" data-id="main-layout">
+		<div data-role="header">
+			<div data-role="navbar">
+				<!-- The following line points to the drawer -->
+				<a href="#app-drawer" data-rel="drawer" data-role="button" data-align="left" data-icon="details"></a>
+				<span data-role="view-title"></span>
+				<!-- Bind the settings button imperatively via the 'settings' function in app.js -->
+				<a data-click="Books.settings" data-role="button" data-align="right" data-icon="settings"></a>
+				<!-- Bind the settings button declaratively via the 'href' attribute -->
+				<!--  <a href="views/settings.html" data-role="button" data-align="right" data-icon="settings"></a>-->
+			</div>
+		</div>
+		<!-- TabStrip markup-->
+		<div data-role="footer">
+			<div data-role="tabstrip">
+				<a href="#index" data-icon="home">Home</a>
+				<a href="views/favorites.html" data-icon="favorites">Favorites</a>
+				<a href="views/about.html" data-icon="globe">About</a>
+			</div>
+		</div>
+	</div>
+	<!-- Drawer markup -->
+	<div data-role="drawer" id="app-drawer">
+		<div data-role="header">
+			<div data-role="navbar">
+				<span data-role="view-title">Menu</span>
+			</div>
+		</div>
+		<ul data-role="listview">
+			<li><a href="#index" data-icon="home">Home</a>
+			</li>
+			<li><a href="views/favorites.html" data-icon="favorites">Favorites</a>
+			</li>
+			<li><a href="views/about.html" data-icon="globe">About</a>
+			</li>
+		</ul>
+	</div>
+	<!-- Start of Lesson 2 -->
+	<div data-role="layout" data-id="back-layout">
+		<div data-role="header">
+			<div data-role="navbar">
+				<a data-role="button" data-align="left" data-icon="rewind" data-click="Books.back">Back</a>
+				<span data-role="view-title"></span>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
