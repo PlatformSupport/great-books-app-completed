@@ -35,6 +35,14 @@
             // Will use the Cordova InAppBrowser plugin when deployed to a device. Opens a new window in
             // the simulator
             window.open(currentBook.amazon_url, '_blank', 'location=yes');
+        },
+        setIsFavorite: function () {
+            Books.data.fetch(function () {
+                var dataItem = currentBook;
+                
+                dataItem.set("is_favorite", !dataItem.get("is_favorite"));
+                Books.data.sync();
+            });
         }
     };
 }());
