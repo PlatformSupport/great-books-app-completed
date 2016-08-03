@@ -39,8 +39,8 @@
         setIsFavorite: function () {
             Books.data.fetch(function () {
                 var dataItem = currentBook;
-                if(dataItem.is_favorite==true)dataItem.set("is_favorite", false);
-                else dataItem.set("is_favorite", true);
+                
+                dataItem.set("is_favorite", !dataItem.get("is_favorite"));
                 Books.data.sync();
             });
         }
