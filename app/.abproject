@@ -17,8 +17,8 @@
   "WP8Publisher": "",
   "WP8Capabilities": [],
   "WP8Requirements": [],
-  "WP8PublisherID": "{429631f2-e133-4188-8f34-94433c931d8e}",
-  "WP8ProductID": "{5f93feea-6d3b-4b78-ac11-3db3358cb627}",
+  "WP8PublisherID": "{ea20c616-6c6f-44af-bf66-f5a2c1f94aa0}",
+  "WP8ProductID": "{894c23ee-cfea-47b1-970c-bf38c083fafc}",
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "FrameworkVersion": "4.0.0",
   "CorePlugins": [
